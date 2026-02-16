@@ -13,3 +13,47 @@ body {
     color-scheme: dark;
   }
 }
+ /* =================== The landing page container ===================*/
+.landing_page{   
+  @apply min-h-screen w-full scroll-smooth bg-[url('./images/landingPage_back.jpg')] w-full max-h-screen bg-center  bg-no-repeat bg-cover;   /*Smooth scrolling for the entire landing page*/
+}
+.blur_landingPage{
+  @apply absolute inset-0 bg-black/65;  /*A semi-transparent black overlay to create a blur effect on the landing page background*/ 
+}
+.header_section{
+  @apply absolute inset-0 flex fixed top-0 left-0 justify-between text-white z-50 pt-5 h-[10vh] 
+      bg-gradient-to-b from-black via-black/90 to-transparent;  /*The header section with the website name and navigation bar, positioned absolutely to overlay on the landing page background*/
+}
+.web_name{
+  @apply ml-15 text-[30px] font-medium    /*The website name, styled with margin-left, font size, and font weight*/
+}
+.nav_bar{
+  @apply flex justify-center space-x-8 mr-15;  /*The navigation bar with its links, styled as a flex container with spacing between the links*/
+}
+.nav_link{
+  @apply pr-20 text-[20px]   /*The individual navigation links, styled with padding-right and font size*/
+}
+.slogan_and_btn{
+  @apply absolute inset-0 flex flex-col items-center justify-center text-white z-10;  /*The container for the slogan and the get started button, positioned absolutely to overlay on the landing page background and centered both vertically and horizontally*/
+}
+/* ---------------The landing section container --------------*/
+.landing_section {    
+  @apply min-h-[80dvh] w-full bg-[rgba(255,255,255,0.2)];   /*Minimum height of 100% of the viewport height and full width*/
+  
+}
+.section_title {
+  @apply text-center text-[40px] font-bold mt-4 mb-4;  /*The section title, styled with center alignment, font size, font weight, and margin-bottom*/
+}
+/* =================== The about section container ===================*/
+.about_section {    
+  @apply flex flex-col;
+}
+/* ================The contact section container================== */
+.contact_section {    
+  @apply min-h-[35dvh] w-full bg-[rgba(255,255,255,0.7)] text-[rgba(0,0,0,0.8)];  /*Minimum height of 35% of the viewport height and full width*/
+}
+
+.card{
+  @apply w-70 rounded-lg shadow-md p-6 text-center shadow-[8px_8px_20px_0px_#2563eb] 
+                hover:shadow-[8px_8px_20px_0px_#2563eb] transition-shadow duration-300;  /*The card component, styled with a semi-transparent white background, rounded corners, shadow, padding, and centered text*/
+}
