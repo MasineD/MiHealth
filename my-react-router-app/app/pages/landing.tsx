@@ -8,6 +8,7 @@ import Testimonials from "../pages/testimonials";
 import Contacts from "../pages/contacts";
 import "../app.css";
 import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 //-------------- The landing page component ------------------
 const Landing = () => {
@@ -38,10 +39,16 @@ const Landing = () => {
         };
     }, []);
 
+    // navigating to the the login pages
+    const navigate = useNavigate();
+    const gotoLogin = () =>{
+        navigate('/login_signup')
+    };
+
     return (
         <div className="bg-[rgba(255,255,255,0.2)]">
             <section className="landing_page">
-                <div className="blur_landingPage"></div>
+                <div className="blur_background"></div>
                 <header className="header_section"> 
                     <h1 id='website_name' className='web_name'>MiHealth</h1>
                     <nav id='navigation_bar' className="nav_bar">
@@ -57,10 +64,8 @@ const Landing = () => {
                         <p id='p_slogan' className="text-center text-[40px]">YOUR HEALTH, YOUR WEALTH</p>
                     </div>
                     <a href="#">
-                        <button 
-                            id='get_started' 
-                            className="text-[20px] mt-10 bg-blue-400 w-[150px] h-[50px] rounded-md cursor-pointer"
-                        >
+                        <button id='get_started' onClick={gotoLogin}
+                        className="text-[20px] mt-10 bg-blue-400 w-[150px] h-[50px] rounded-md cursor-pointer">
                             Get Started
                         </button>
                     </a>

@@ -17,7 +17,7 @@ body {
 .landing_page{   
   @apply min-h-screen w-full scroll-smooth bg-[url('./images/landingPage_back.jpg')] w-full max-h-screen bg-center  bg-no-repeat bg-cover;   /*Smooth scrolling for the entire landing page*/
 }
-.blur_landingPage{
+.blur_background{
   @apply absolute inset-0 bg-black/65;  /*A semi-transparent black overlay to create a blur effect on the landing page background*/ 
 }
 .header_section{
@@ -55,5 +55,36 @@ body {
 
 .card{
   @apply w-70 rounded-lg shadow-md p-6 text-center shadow-[8px_8px_20px_0px_#2563eb] 
-                hover:shadow-[8px_8px_20px_0px_#2563eb] transition-shadow duration-300;  /*The card component, styled with a semi-transparent white background, rounded corners, shadow, padding, and centered text*/
+  hover:shadow-[8px_8px_20px_0px_#2563eb] transition-shadow duration-300;  /*The card component, styled with a semi-transparent white background, rounded corners, shadow, padding, and centered text*/
+}
+
+/* =============== Styling the login ================== */
+.container{
+  /* A container with image as the background, taking maximum width and height */
+  @apply w-[100dvw] min-h-screen bg-[url('./images/login_back.jpg')] max-h-screen bg-center bg-no-repeat bg-cover
+}
+.forms{
+  @apply ml-[8dvw] mt-[23dvh] w-[35dvw] flex flex-col text-black items-center border border-[#2563eb]  rounded-lg h-[55dvh]
+        shadow-[8px_8px_20px_0px_#2563eb] transition-shadow duration-300 z-50 bg-white
+}
+.formContainer{
+  @apply pt-5 w-100 
+}
+Form{
+  @apply flex flex-col items-center justify-center    /*A form with contents placed at the center*/
+}
+.subTitle{
+  @apply text-[40px] mb-5 text-center       /*A form title with contents placed at the center*/
+}
+input{
+  @apply border-2 border-dotted mb-2 pl-2 rounded-lg w-[100%] h-10    /*input field with dotted and rounded border*/
+}
+.forgotPassword{
+  @apply mt-1   
+}
+.accountExistance{
+  @apply mt-3
+}
+.accountExistanceBtn{
+  @apply items-center underline decoration-blue-500 text-blue-500 mt-1    
 }
