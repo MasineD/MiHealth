@@ -39,12 +39,13 @@ export default function Services(){
                     </p>
                 </div>
                 {/* Mapping the elements from the services array into individual cards */}
-                <div className="cardContainer">
+                <div className="cardContainer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-25">
                     {services.map((service,index) => (
-                        <div key={index} className="serviceCard">
-                            <h2 className="serviceTitle">{service.title}</h2>
-                            <img alt={service.title} src={service.image} className="serviceImage"/>
-                            <p className="serviceDescription">{service.description}</p>
+                        <div key={index} className="serviceCard border border-white/10 w-70 rounded-lg shadow-md p-6 text-center shadow-[8px_8px_20px_0px_#2563eb] 
+                            hover:shadow-[8px_8px_20px_0px_#2563eb] transition-shadow duration-300">
+                            <h3 className="serviceTitle text-xl font-bold text-center mb-2">{service.title}</h3>
+                            <img alt={service.title} src={service.image} className="serviceImage mx-auto mb-4 w-100 h-35 rounded-lg"/>
+                            <p className="serviceDescription text-center">{service.description}</p>
                         </div>
                     ))}
                 </div>

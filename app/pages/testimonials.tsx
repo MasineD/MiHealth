@@ -31,7 +31,7 @@ const reviews = [
 
 export default function Testimonials(){
     return(
-        <section id='testimonialsSection' className='testimonialsSection'>
+        <section id='testimonialsSection' className='testimonialsSection mt-20'>
             <div className="">
                 <div className="sectionIntro">      {/*Introductory details to the section*/}
                     <span className="introQuestion">Reviews</span>
@@ -41,17 +41,18 @@ export default function Testimonials(){
                     </p>
                 </div>
                 {/* Mapping the elements from the services array into individual cards */}
-                <div className="cardContainer">
+                <div className="cardContainer grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-25">
                     {reviews.map((review,index) => (
-                        <div key={index} className="reviewCard">
-                            <div className="reviewRating">
+                        <div key={index} className="reviewCard border border-white/10 w-70 rounded-lg shadow-md p-6 text-center shadow-[8px_8px_20px_0px_#2563eb] 
+                            hover:shadow-[8px_8px_20px_0px_#2563eb] transition-shadow duration-300">
+                            <div className="reviewRating text-yellow-400 text-[30px]">
                                  {/*TODO: Use a nice and neet icon for star */}
                                 {Array.from({length : review.rating}).map((_,j)=>(
                                     <span key={j} className="rating">*</span>
                                 ))}
                             </div>
                             <p className="reviewDescription">{review.text}</p>
-                            <h4 className="reviewerName">{review.name}</h4>
+                            <h4 className="reviewerName mt-2 border-t text-[20px] text-bold">{review.name}</h4>
                             <h5 className="reviewrRole">{review.role}</h5>
                         </div>
                     ))}

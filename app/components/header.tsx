@@ -1,5 +1,24 @@
 // ========== Header section,containing the website name and the navigation bar=============
 
+// Array of different sections to navigate to
+const sections = [
+    {
+        id:'aboutSection',
+        name: 'About'
+    },
+    {
+        id:'servicesSection',
+        name: 'Services'
+    },
+    {
+        id:'testimonialsSection',
+        name: 'Testimonials'
+    },
+    {
+        id:'contactSection',
+        name: 'Contact Us'
+    }
+]
 export default function Header() {
   
   const scrollToSection = (id: string) => {
@@ -8,20 +27,20 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 flex items-center justify-between h-16">
+    <header className="headerSection">
+      <div className="max-w-7xl px-4 sm:px-8 lg:px-16 flex items-center justify-center h-16">
         <div className="flex items-center space-x-2">
           {/* <Heart className="w-6 h-6 text-primary" /> */}
           <span className="text-xl font-heading font-bold text-primary">MiHealth</span>
         </div>
-        <nav className="hidden md:flex items-center space-x-8">
-          {['about', 'services', 'testimonials', 'contact'].map((section) => (
+        <nav className="hidden md:flex items-center space-x-15 md:ml-100">
+          {sections.map((section) => (
             <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className="text-sm font-medium text-foreground hover:text-primary capitalize transition-colors"
+              key={section.id}
+              onClick={() => scrollToSection(section.id)}
+              className="text-sm font-medium w-30 rounded-b-lg  bg-gradient-to-b from-transparent via-black/90 to-black hover:shadow-[8px_8px_20px_0px_#2563eb] transition-shadow duration-300 hover:bg-black/90 hover:cursor-pointer"
             >
-              {section}
+              {section.name}
             </button>
           ))}
         </nav>
