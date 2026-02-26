@@ -18,9 +18,9 @@ export default function LandingPage() {
       <section id="home"className="heroSection relative h-screen w-full flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl font-heading font-bold mb-4">Welcome to MiHealth</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Your trusted partner in digital healthcare</p>
-          <button onClick={() => navigate('/login')} className="bg-primary text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all hover:scale-105">
+          <h2 className="text-[70px] text-center font-heading font-bold mb-4">Improving Your Health<br/> The SMART Way</h2>
+          <p className="mb-8 max-w-2xl mx-auto text-center text-[40px]">YOUR HEALTH, YOUR WEALTH</p>
+          <button onClick={() => navigate('/login')} className="bg-blue-500 text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all hover:scale-105 hover:cursor-pointer">
             Get Started
           </button>
         </div>

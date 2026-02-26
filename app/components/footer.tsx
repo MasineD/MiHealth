@@ -56,34 +56,34 @@ export default function Footer(){
         if (element) element.scrollIntoView({behavior:'smooth'});   //Allowing for smooth scroll
     }
     return(
-        <footer className="footerSection">
-            <div className="footerContainer">
-                <div className="cardContainer">
-                    <div className="websiteSummary space-y-4">
-                        <div className="space-x-2">
-                            <span className="websiteName">MiHealth</span>
+        <footer className="footerSection py-16 mt-15 sm:px-4 lg:px-18">
+            <div className="footerContainer max-w-7xl mx-auto">
+                <div className="cardContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <div className="websiteSummary space-y-4 border-r">
+                        <div className="flex items-center space-x-2">
+                            <span className="websiteName text-xl font-bold">MiHealth</span>
                         </div>
-                        <p>Empowering Healthcare through technology</p>
+                        <p className="text-sm">Empowering Healthcare through technology</p>
                     </div>
-                    <div className="websiteSections">       
-                        <h5>Navigate</h5>
+                    <div className="websiteSections border-r">       
+                        <h5 className="mb-4">Navigate</h5>
                         <ul className="space-y-3">
                             {/*Mapping the elements of the constant array into individual list items */}
                             {footerDetails.map((item)=>(        
                                 <li key={item.id}>
-                                    <button onClick={()=>scrollToSection(item.id)}>
+                                    <button className='text-sm' onClick={()=>scrollToSection(item.id)}>
                                         {item.label}
                                     </button>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <div className="resources">
-                        <h5>Resources</h5>
+                    <div className="resources border-r">
+                        <h5 className="mb-4">Resources</h5>
                         <ul className="space-y-3">
                             {resources.map((item)=>(
                                 <li key={item.label}>
-                                    <a href={item.link}>
+                                    <a href={item.link} className="text-sm">
                                         {item.label}
                                     </a>
                                 </li>
@@ -91,11 +91,11 @@ export default function Footer(){
                         </ul> 
                     </div>
                     <div className="legal">
-                        <h5>Legal</h5>
+                        <h5 className="mb-4">Legal</h5>
                         <ul className="space-y-3">
                             {legalDetials.map((item)=>(
                                 <li key={item.label}>
-                                    <a href={item.link}>
+                                    <a href={item.link} className="text-sm">
                                         {item.label}
                                     </a>
                                 </li>
@@ -103,7 +103,7 @@ export default function Footer(){
                         </ul> 
                     </div>
                 </div>
-                <div className="copyright">
+                <div className="copyright pt-8 border-t items-center justify-center">
                     <p className="copyrightDetails">
                         @{new Date().getFullYear()} MiHealth. All rights reserved
                     </p>
