@@ -33,7 +33,7 @@ export default function About() {
                         </p>
                         <div className="statSection grid grid-cols-3 gap-6 pt-4 border-t border-border">   {/*Mappging the elements in stats array to individual cards */}
                             {stats.map((stat)=>(
-                              <div>
+                              <div key={stat.value}>
                                 <p>{stat.value}</p>
                                 <p>{stat.label}</p>
                               </div>

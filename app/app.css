@@ -37,3 +37,7 @@ body {
 .footerSection{
   @apply bg-gradient-to-b from-transparent via-black/90 to-black
 }
+/* ==========Styles for the login page======== */
+.loginContainer{
+  @apply bg-[url('./images/landingPage_back.jpg')] bg-cover bg-center bg-no-repeat
+}
