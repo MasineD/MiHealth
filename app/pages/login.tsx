@@ -63,7 +63,7 @@ export default function LoginPage(){
                    {/* Footer section for the login page*/}
                     {isLogin && (
                         <div>
-                            <button className="w-full text-white py-3 rounded-lg font-semibold bg-blue-500 hover:cursor-pointer hover:-translate-y-1">
+                            <button onClick={() => navigate('/dashboard')} className="w-full text-white py-3 rounded-lg font-semibold bg-blue-500 hover:cursor-pointer hover:-translate-y-1">
                             Login
                         </button>
                         <p className="noAccount">
