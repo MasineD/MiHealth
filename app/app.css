@@ -45,3 +45,6 @@ body {
 .editProfileInput{
   @apply w-[100%] py-[10px] px-[12px] bg-['#111111'] border-['#3a3a3a'] border-1 rounded-[8px] font-[13px] text-white outline-none mt-2
 }
+.blurBackground{
+  @apply inset-0 bg-[rgba(0,0,0,0.4)] h-[100vh]
+}
