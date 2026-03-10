@@ -42,3 +42,6 @@ body {
   @apply bg-[url('./images/landingPage_back.jpg')] bg-cover bg-center bg-no-repeat
 }
 /* =========Styling the dashboard page======== */
+.editProfileInput{
+  @apply w-[100%] py-[10px] px-[12px] bg-['#111111'] border-['#3a3a3a'] border-1 rounded-[8px] font-[13px] text-white outline-none mt-2
+}
